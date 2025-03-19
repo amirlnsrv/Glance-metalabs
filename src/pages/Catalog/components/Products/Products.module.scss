@@ -1,0 +1,11 @@
+.products {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 64px;
+	border-top: 1px solid var(--light-blue);
+	border-bottom: 1px solid var(--light-blue);
+	padding: 24px;
+}

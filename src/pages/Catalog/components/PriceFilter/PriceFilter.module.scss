@@ -1,0 +1,20 @@
+.catalogPriceFilter {
+	.catalogPriceTitle {
+		font-weight: 400;
+		font-size: 16px;
+		color: var(--black);
+	}
+	.catalogPriceRange {
+		margin-top: 16px;
+		font-weight: 300;
+		font-size: 14px;
+		color: var(--blue);
+	}
+	
+	.catalogPriceCurrent {
+		margin-top: 8px;
+		font-weight: 300;
+		font-size: 14px;
+		color: var(--dark-gray);
+	}
+}

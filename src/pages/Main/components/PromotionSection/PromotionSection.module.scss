@@ -1,0 +1,11 @@
+.promotionInner {
+	padding: 24px 0;
+	border-top: 1px solid var(--light-blue);
+	border-bottom: 1px solid var(--light-blue);
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 68px;
+	overflow-x: scroll;
+	margin-top: 28px;
+}

@@ -1,0 +1,51 @@
+.card {
+	max-width: 169px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	position: relative;
+
+	&Image {
+		border-radius: 8px;
+	}
+
+	&Title {
+		font-weight: 400;
+		font-size: 20px;
+		color: var(--black);
+		line-height: 160%;
+	}
+
+	&Prices {
+		display: flex;
+		align-items: baseline;
+		gap: 8px;
+	}
+
+	&Discount {
+		font-weight: 500;
+		font-size: 20px;
+		color: var(--black);
+	}
+
+	&Price {
+		font-weight: 300;
+		font-size: 14px;
+		text-decoration: line-through;
+		color: var(--semi-light-gray);
+	}
+
+	&Footer {
+		p {
+			font-weight: 300;
+			font-size: 14px;
+			margin-bottom: 32px;
+		}
+		.cardInstock {
+			color: var(--green);
+		}
+		.cardNotinstock {
+			color: var(--semi-light-gray);
+		}
+	}
+}

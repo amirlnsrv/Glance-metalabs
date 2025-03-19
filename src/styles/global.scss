@@ -1,2 +1,17 @@
 @use "./reset.scss";
 @use "./variables.scss";
+
+body {
+	font-family: Roboto, sans-serif !important;
+	background-color: var(--white) !important;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1 1 auto;
+}

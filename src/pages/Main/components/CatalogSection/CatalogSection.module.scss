@@ -1,0 +1,10 @@
+.catalog {
+	&Inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		overflow-x: scroll;
+		gap: 16px;
+		margin-top: 28px;
+	}
+}

@@ -1,0 +1,32 @@
+.breadCrumbs {
+    display: flex;
+    user-select: none;
+
+    &Item {
+        display: flex;
+        align-items: center;
+
+        .separator {
+            color: var(--semi-light-gray);
+            font-size: 24px;
+            margin: 0 5px;
+        }
+    }
+
+    &Current {
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--dark-gray);
+        text-wrap: nowrap;
+    }
+
+    .breadCrumbsItem {
+        text-wrap: nowrap;
+    }
+
+    .breadCrumbsLink {
+        font-weight: 400;
+        font-size: 16px;
+        color: var(--semi-light-gray);
+    }
+}
