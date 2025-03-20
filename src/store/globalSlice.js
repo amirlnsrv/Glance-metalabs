@@ -5,7 +5,8 @@ import { getProducts } from "api/action";
 
 const initialState = {
   products: [],
-  categories: categories,
+  categoryId: 1,
+  categories,
   loading: false,
   error: null,
 };

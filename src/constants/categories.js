@@ -10,30 +10,36 @@ export const categories = [
     img: catalogImg1,
     title: "Смартфоны",
     path: "/smartphones",
+    categoryId: 1,
   },
   {
     img: catalogImg2,
     title: "Ноутбуки",
     path: "/laptops",
+    categoryId: 2,
   },
   {
     img: catalogImg3,
     title: "Компьютеры",
     path: "/computers",
+    categoryId: 3,
   },
   {
     img: catalogImg4,
     title: "Телевизоры",
     path: "/televisors",
+    categoryId: 4,
   },
   {
     img: catalogImg5,
     title: "Планшеты",
     path: "/tablets",
+    categoryId: 5,
   },
   {
     img: catalogImg6,
     title: "Колонки",
     path: "/speakers",
+    categoryId: 6,
   },
 ];

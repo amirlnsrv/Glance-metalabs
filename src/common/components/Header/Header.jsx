@@ -28,7 +28,7 @@ export const Header = () => {
           </div>
           <nav className={styles.headerNav}>
             <NavLink
-              to={ROUTER_PATHS.catalog}
+              to="/catalog/1"
               className={({ isActive }) =>
                 isActive ? `${styles.active}` : `${styles.link}`
               }

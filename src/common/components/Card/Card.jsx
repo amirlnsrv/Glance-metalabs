@@ -1,8 +1,11 @@
 import { Button } from "common/ui/Button";
 import styles from "./Card.module.scss";
 import { Badge } from "common/ui/Badge";
+import { useNavigate } from "react-router-dom";
 
-export const Card = ({ item, onClick }) => {
+export const Card = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.card}>
       <img className={styles.cardImage} src={item.img} alt={item.title} />
@@ -24,7 +27,11 @@ export const Card = ({ item, onClick }) => {
         ) : (
           <p className={styles.cardNotinstock}>Нет в наличии</p>
         )}
-        <Button title="Подробнее" onClick={onClick} />
+
+        <Button
+          title="Подробнее"
+          onClick={() => navigate(`/product/${item.id}`)}
+        />
       </div>
     </div>
   );

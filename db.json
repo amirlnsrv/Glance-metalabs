@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"img": "https://i.postimg.cc/tg2kKBry/promotion-Item1.png",
-			"title": "Смартфон Apple iPhone 14 128GB",
+			"title": "Apple iPhone 14",
 			"price": 87999,
 			"discountPrice": 84999,
 			"inStock": true,
@@ -12,16 +12,15 @@
 		{
 			"id": 2,
 			"img": "https://i.postimg.cc/50ygb8Gz/promotion-Item2.png",
-			"title": "Смартфон Apple iPhone 12 64GB",
+			"title": "Apple iPhone 12",
 			"price": 47756,
-			"discountPrice": 42980,
 			"inStock": false,
 			"categoryId": 1
 		},
 		{
 			"id": 3,
 			"img": "https://i.postimg.cc/br2R2pqN/promotion-Item3.png",
-			"title": "Смартфон HUAWEI nova Y61",
+			"title": "HUAWEI nova Y61",
 			"price": 14117,
 			"discountPrice": 11999,
 			"inStock": true,
@@ -30,7 +29,7 @@
 		{
 			"id": 4,
 			"img": "https://i.postimg.cc/ZRQcRCtM/promotion-Item4.png",
-			"title": "Смартфон Xiaomi Redmi  128GB",
+			"title": "Xiaomi Redmi",
 			"price": 87999,
 			"discountPrice": 84479,
 			"inStock": false,
@@ -39,7 +38,7 @@
 		{
 			"id": 5,
 			"img": "https://i.postimg.cc/3W5FXVwj/promotion-Item5.png",
-			"title": "Смартфон Apple iPhone 14 128GB",
+			"title": "Apple iPhone 14",
 			"price": 79999,
 			"discountPrice": 75999,
 			"inStock": true,
@@ -48,10 +47,34 @@
 		{
 			"id": 6,
 			"img": "https://i.postimg.cc/br2R2pqN/promotion-Item3.png",
-			"title": "Смартфон HUAWEI nova Y61",
+			"title": "HUAWEI nova Y61",
 			"price": 14117,
 			"discountPrice": 11999,
 			"inStock": false,
+			"categoryId": 1
+		},
+		{
+			"id": 7,
+			"img": "https://i.postimg.cc/rwS2zYDB/Rectangle-81-6.png",
+			"title": "HUAWEI nova 11i",
+			"price": 36999,
+			"inStock": true,
+			"categoryId": 1
+		},
+		{
+			"id": 8,
+			"img": "https://i.postimg.cc/XJBRSH61/Rectangle-81-7.png",
+			"title": "Apple iPhone 14 Pro",
+			"price": 119969,
+			"inStock": true,
+			"categoryId": 1
+		},
+		{
+			"id": 9,
+			"img": "https://i.postimg.cc/XJBRSH61/Rectangle-81-7.png",
+			"title": "Samsung Galaxy A24",
+			"price": 18559,
+			"inStock": true,
 			"categoryId": 1
 		}
 	]

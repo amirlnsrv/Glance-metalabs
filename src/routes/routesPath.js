@@ -1,6 +1,6 @@
 export const ROUTER_PATHS = {
   main: "/",
-  catalog: "/catalog",
+  catalog: "/catalog/:id",
   cart: "/cart",
   product: "/product/:id",
   profile: "/profile",

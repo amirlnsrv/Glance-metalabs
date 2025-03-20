@@ -11,12 +11,6 @@
 			align-items: center;
 			gap: 20px;
 		}
-
-		&View {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
 	}
 
 	&Content {
@@ -37,4 +31,26 @@
 		gap: 20px;
 		height: fit-content;
 	}
+}
+
+@media (max-width: 767.98px) {
+	.catalogContent {
+		flex-direction: column;
+
+		.catalogFilters {
+			max-width: none;
+		}
+	}
+}
+
+.products {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 64px;
+	border-top: 1px solid var(--light-blue);
+	border-bottom: 1px solid var(--light-blue);
+	padding: 24px;
 }
