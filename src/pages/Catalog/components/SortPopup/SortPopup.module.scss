@@ -1,9 +1,33 @@
 .sort {
-	display: flex;
-	align-items: center;
-	gap: 8px;
+	position: relative;
+	cursor: pointer;
+	max-width: 200px;
 
-	p {
-		font-size: 16px;
+	.sortHeader {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.sortList {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: var(--white);
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		z-index: 10;
+	}
+
+	.sortList li {
+		padding: 10px;
+		list-style: none;
+		cursor: pointer;
+		transition: background 0.2s;
+	}
+
+	.sortList li:hover {
+		background: #f0f0f0;
 	}
 }

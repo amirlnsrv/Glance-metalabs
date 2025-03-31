@@ -4,13 +4,16 @@ import styles from "./Header.module.scss";
 import { AppContainer } from "layouts/AppContainer/AppContainer";
 import { ROUTER_PATHS } from "routes/routesPath";
 import glanceIcon from "assets/icons/glance.svg";
-import searchIcon from "assets/icons/search.svg";
 
 import { IoIosList } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { useSelector } from "react-redux";
+import { Search } from "../Search";
 
 export const Header = () => {
+  const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <header className={styles.header}>
       <AppContainer>
@@ -18,14 +21,7 @@ export const Header = () => {
           <Link to={ROUTER_PATHS.main}>
             <img src={glanceIcon} alt="glance-icon" />
           </Link>
-          <div className={styles.headerSearchContainer}>
-            <img src={searchIcon} alt="search-icon" />
-            <input
-              type="text"
-              className={styles.headerSearchInput}
-              placeholder="Поиск"
-            />
-          </div>
+          <Search />
           <nav className={styles.headerNav}>
             <NavLink
               to="/catalog/1"
@@ -42,7 +38,14 @@ export const Header = () => {
                 isActive ? `${styles.active}` : `${styles.link}`
               }
             >
-              <MdOutlineShoppingCart size={20} />
+              <div className={styles.cartIcon}>
+                <MdOutlineShoppingCart size={20} />
+                {cartItems.length ? (
+                  <div className={styles.cartIconCount}>{cartItems.length}</div>
+                ) : (
+                  ""
+                )}
+              </div>
               <span>Корзина</span>
             </NavLink>
             <NavLink

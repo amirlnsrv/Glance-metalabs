@@ -5,6 +5,7 @@ import { ROUTER_PATHS } from "./routesPath";
 import { Main } from "../pages/Main";
 import { ProductDetails } from "../pages/ProductDetails";
 import { Catalog } from "../pages/Catalog";
+import { Cart } from "../pages/Cart";
 
 export const routes = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: ROUTER_PATHS.cart,
-        element: <p>Cart</p>,
+        element: <Cart />,
       },
       {
         path: ROUTER_PATHS.profile,

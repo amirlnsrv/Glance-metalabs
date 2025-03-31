@@ -1,6 +1,11 @@
 .footer {
 	display: none;
 	padding: 20px 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: var(--white);
+	z-index: 100;
 
 	&Nav {
 		display: flex;
@@ -29,6 +34,27 @@
 		.active {
 			color: var(--blue);
 		}
+	}
+}
+
+.cartIcon {
+	position: relative;
+
+	&Count {
+		width: 20px;
+		height: 20px;
+		background-color: var(--violet);
+		color: var(--white);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		font-size: 14px;
+		border-radius: 100%;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		transform: translate(50%, -50%);
 	}
 }
 

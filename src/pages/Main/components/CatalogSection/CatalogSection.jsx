@@ -7,7 +7,7 @@ import { Title } from "common/components/Title";
 import { useSelector } from "react-redux";
 
 export const CatalogSection = () => {
-  const { categories } = useSelector((state) => state.global);
+  const { categories } = useSelector((state) => state.products);
 
   return (
     <section className={styles.catalog}>

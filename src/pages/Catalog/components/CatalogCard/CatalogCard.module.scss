@@ -1,0 +1,121 @@
+.catalogCard {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	border-bottom: 1px solid var(--light-blue);
+	padding: 24px 0;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	.wrapper {
+		gap: 24px;
+		display: flex;
+		cursor: pointer;
+
+		.img {
+			max-width: 169px;
+			position: relative;
+		}
+
+		.body {
+			.title {
+				font-size: 20px;
+				color: var(--black);
+			}
+			.desc {
+				margin-top: 12px;
+				padding-left: 0;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 125%;
+				color: var(--dark-gray);
+			}
+			.instock {
+				margin-top: 20px;
+				font-weight: 300;
+				font-size: 14px;
+				color: var(--green);
+			}
+			.notinstock {
+				margin-top: 20px;
+				font-weight: 300;
+				font-size: 14px;
+				color: var(--semi-light-gray);
+			}
+		}
+	}
+
+	.footer {
+		max-width: 200px;
+		width: 100%;
+
+		.prices {
+			display: flex;
+			gap: 8px;
+			align-items: baseline;
+			justify-content: flex-end;
+			margin-bottom: 24px;
+
+			.discountPrice {
+				font-weight: 500;
+				font-size: 20px;
+				color: var(--black);
+			}
+			.commonPrice {
+				font-weight: 300;
+				font-size: 14px;
+				text-decoration: line-through;
+				color: var(--semi-light-gray);
+			}
+		}
+	}
+}
+
+.notavailable {
+	background-color: var(--semi-light-gray);
+	cursor: not-allowed !important;
+}
+
+@media (max-width: 991.98px) {
+	.catalogCard {
+		align-items: flex-end;
+
+		.wrapper {
+			flex-direction: column;
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.img {
+		max-width: 169px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.catalogCard {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+
+		.wrapper {
+			flex-direction: row;
+		}
+		.footer {
+			align-self: flex-end;
+
+			.prices {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

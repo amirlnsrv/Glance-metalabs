@@ -8,6 +8,8 @@
 		"routes/*": ["routes/*"],
 		"api/*": ["api/*"],
 		"constants/*": ["constants/*"],
+		"store/*": ["store/*"],
+		"helpers/*": ["helpers/*"]
 	}
   },
 }

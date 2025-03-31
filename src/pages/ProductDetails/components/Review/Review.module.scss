@@ -1,0 +1,64 @@
+.review {
+	padding: 23px 38px 25px 18px;
+	background-color: var(--white);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	&Author {
+		display: flex;
+		gap: 16px;
+
+		&Avatar {
+			width: 48px;
+			height: 48px;
+			border-radius: 100%;
+		}
+
+		&Center {
+			p {
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 125%;
+				color: var(--dark-gray);
+			}
+			.reviewAuthorRate {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+
+				img {
+					width: 14px;
+				}
+			}
+		}
+
+		&Date {
+			font-weight: 300;
+			font-size: 16px;
+			color: var(--black);
+		}
+	}
+	&Text {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		max-width: 192px;
+
+		&Pros,
+		&Cons {
+			b {
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 160%;
+				color: var(--black);
+			}
+
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 133%;
+			color: var(--dark-gray);
+		}
+	}
+}

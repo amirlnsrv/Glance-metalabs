@@ -7,8 +7,11 @@ import { IoHomeOutline } from "react-icons/io5";
 import { IoIosList } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 export const FooterNav = () => {
+  const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <footer className={styles.footer}>
       <AppContainer>
@@ -23,7 +26,7 @@ export const FooterNav = () => {
             <span>Главная</span>
           </NavLink>
           <NavLink
-            to={ROUTER_PATHS.catalog}
+            to="/catalog/1"
             className={({ isActive }) =>
               isActive ? `${styles.active}` : `${styles.link}`
             }
@@ -37,7 +40,14 @@ export const FooterNav = () => {
               isActive ? `${styles.active}` : `${styles.link}`
             }
           >
-            <MdOutlineShoppingCart size={20} />
+            <div className={styles.cartIcon}>
+              <MdOutlineShoppingCart size={20} />
+              {cartItems.length ? (
+                <div className={styles.cartIconCount}>{cartItems.length}</div>
+              ) : (
+                ""
+              )}
+            </div>
             <span>Корзина</span>
           </NavLink>
           <NavLink

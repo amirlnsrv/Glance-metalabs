@@ -12,6 +12,8 @@ export default defineConfig({
       routes: "/src/routes",
       api: "/src/api",
       constants: "/src/constants",
+      store: "/src/store",
+      helpers: "/src/helpers"
     },
   },
 });

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "concurrently \"vite\" \"json-server --watch ./db.json --port 3001\"",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -12,18 +13,21 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
+    "antd": "^5.24.4",
     "axios": "^1.8.3",
     "bootstrap": "^5.3.3",
+    "concurrently": "^9.1.2",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
-    "react-bootstrap": "^2.10.9",
     "react-content-loader": "^7.0.2",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.2.0",
     "react-slider": "^2.0.6",
-    "sass": "^1.85.1"
+    "react-toastify": "^11.0.5",
+    "sass": "^1.85.1",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

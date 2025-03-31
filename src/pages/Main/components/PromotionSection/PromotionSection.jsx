@@ -13,10 +13,14 @@ import { Skeleton } from "common/ui/Skeleton";
 export const PromotionSection = () => {
   const dispatch = useDispatch();
 
-  const { products, loading } = useSelector((state) => state.global);
+  const { responseForProducts, loading } = useSelector(
+    (state) => state.products
+  );
+
+  const { data } = responseForProducts;
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getProducts({ limit: 6, page: 1 }));
   }, []);
 
   const loader = [1, 2, 3, 4, 5];
@@ -28,7 +32,7 @@ export const PromotionSection = () => {
         <div className={styles.promotionInner}>
           {loading
             ? loader.map((_, idx) => <Skeleton key={idx} />)
-            : products.map((item, idx) =>
+            : data?.map((item, idx) =>
                 item.discountPrice ? <Card key={idx} item={item} /> : ""
               )}
         </div>

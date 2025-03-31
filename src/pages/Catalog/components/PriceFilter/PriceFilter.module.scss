@@ -1,4 +1,6 @@
 .catalogPriceFilter {
+	width: 179px;
+
 	.catalogPriceTitle {
 		font-weight: 400;
 		font-size: 16px;
@@ -10,11 +12,17 @@
 		font-size: 14px;
 		color: var(--blue);
 	}
-	
+
 	.catalogPriceCurrent {
 		margin-top: 8px;
 		font-weight: 300;
 		font-size: 14px;
 		color: var(--dark-gray);
+	}
+}
+
+@media (max-width: 767.98px) {
+	.catalogPriceFilter {
+		width: 100%;
 	}
 }
