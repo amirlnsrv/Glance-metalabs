@@ -49,7 +49,7 @@ export const Header = () => {
               <span>Корзина</span>
             </NavLink>
             <NavLink
-              to={ROUTER_PATHS.profile}
+              to={ROUTER_PATHS.auth}
               className={({ isActive }) =>
                 isActive ? `${styles.active}` : `${styles.link}`
               }

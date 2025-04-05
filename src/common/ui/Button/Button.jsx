@@ -1,9 +1,9 @@
 import styles from "./Button.module.scss";
 
-export const Button = ({ title, onClick, className }) => {
+export const Button = ({ children, onClick, className, title }) => {
   return (
     <button className={`${styles.button} ${className}`} onClick={onClick}>
-      {title}
+      {children} {title}
     </button>
   );
 };

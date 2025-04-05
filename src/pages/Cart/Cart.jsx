@@ -7,16 +7,26 @@ import cartIsEmpty from "assets/images/empty.png";
 import { Title } from "common/components/Title";
 import { AppContainer } from "layouts/AppContainer";
 import { CartItem } from "./components/CartItem.jsx";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "common/ui/Button";
 import { useNavigate } from "react-router-dom";
+import { submitOrder } from "api/action";
+import { Flip, toast, ToastContainer } from "react-toastify";
 
 export const Cart = () => {
+  const dispatch = useDispatch();
   const { cartItems, totalAmount } = useSelector((state) => state.cart);
   const navigate = useNavigate();
+  const notifySuccessOrder = () => toast("Заказ успешно оформлен!");
+
+  const handleOrder = () => {
+    dispatch(submitOrder());
+    notifySuccessOrder();
+  };
 
   return (
     <main className={styles.cart}>
+      <ToastContainer transition={Flip} />
       <AppContainer>
         <div className={styles.cartHeader}>
           <BreadCrumbs
@@ -52,7 +62,7 @@ export const Cart = () => {
                 <h2 className={styles.orderTitle}>Итого:</h2>
                 <p className={styles.orderTotalCost}>{totalAmount} сом</p>
               </div>
-              <Button title="Оформить заказ" />
+              <Button title="Оформить заказ" onClick={handleOrder} />
             </div>
           </section>
         )}

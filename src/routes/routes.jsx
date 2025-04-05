@@ -6,6 +6,9 @@ import { Main } from "../pages/Main";
 import { ProductDetails } from "../pages/ProductDetails";
 import { Catalog } from "../pages/Catalog";
 import { Cart } from "../pages/Cart";
+import { ProfilePage } from "../pages/ProfilePage";
+import { Auth } from "../pages/Auth";
+import AuthLayout from "../layouts/AuthLayout";
 
 export const routes = createBrowserRouter([
   {
@@ -29,8 +32,18 @@ export const routes = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: ROUTER_PATHS.profile,
-        element: <p>Profile</p>,
+        path: ROUTER_PATHS.auth,
+        element: <AuthLayout />,
+        children: [
+          {
+            index: true,
+            element: <Auth />,
+          },
+          {
+            path: "profile",
+            element: <ProfilePage />,
+          },
+        ],
       },
       {
         path: "*",

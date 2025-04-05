@@ -39,19 +39,29 @@ export const Search = () => {
       }
     }, 500);
 
-    return () => clearTimeout(delayDebounce);
+    return () => {
+      clearTimeout(delayDebounce);
+    };
   }, [query, allProducts]);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && filteredProducts.length > 0) {
       navigate(`/product/${filteredProducts[0].id}`); // Переход на страницу первого товара
+      setIsDropdownOpen(false);
+    }
+  };
+
+  const handleSearchClick = () => {
+    if (filteredProducts.length > 0) {
+      navigate(`/product/${filteredProducts[0].id}`);
+      setIsDropdownOpen(false);
     }
   };
 
   return (
     <div className={styles.search}>
       <div className={styles.searchInpBlock}>
-        <img src={searchIcon} alt="search-icon" />
+        <img src={searchIcon} alt="search-icon" onClick={handleSearchClick} />
         <input
           type="text"
           className={styles.searchInput}

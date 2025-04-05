@@ -3,5 +3,5 @@ export const ROUTER_PATHS = {
   catalog: "/catalog/:id",
   cart: "/cart",
   product: "/product/:id",
-  profile: "/profile",
+  auth: "/auth",
 };

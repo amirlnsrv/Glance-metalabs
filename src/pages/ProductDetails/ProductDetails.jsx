@@ -18,9 +18,12 @@ export const ProductDetails = () => {
   const { id } = useParams();
   const [selectedColor, setSelectedColor] = useState(null);
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+
   const notifyError = () => toast("Произошла ошибка: " + currentProductError);
   const notifyNotInStock = () => toast("Данного товара нет в наличии");
   const notifySuccessAddedInCart = () => toast("Товар добавлен в корзину!");
+  const notifyLogin = () => toast("Войдите в аккаунт, чтобы добавить товар");
 
   const { isCurrentProductLoading, currentProduct, currentProductError } =
     useSelector((state) => state.products);
@@ -40,8 +43,17 @@ export const ProductDetails = () => {
   );
 
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...currentProduct, selectedColor }));
-    notifySuccessAddedInCart();
+    if (user === null) {
+      notifyLogin();
+      return;
+    }
+
+    if (currentProduct.inStock) {
+      dispatch(addToCart({ ...currentProduct, selectedColor }));
+      notifySuccessAddedInCart();
+    } else {
+      notifyNotInStock();
+    }
   };
 
   if (isCurrentProductLoading) {
@@ -138,11 +150,7 @@ export const ProductDetails = () => {
                 className={`${styles.addToCartBtn} ${
                   !currentProduct.inStock ? styles.notavailable : ""
                 }`}
-                onClick={() =>
-                  currentProduct.inStock
-                    ? handleAddToCart()
-                    : notifyNotInStock()
-                }
+                onClick={() => handleAddToCart()}
               />
             </div>
           </div>

@@ -2,7 +2,7 @@ import { Badge } from "common/ui/Badge";
 import styles from "./CatalogCard.module.scss";
 import { Button } from "common/ui/Button";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "store/cartSlice";
 import { Flip, toast, ToastContainer } from "react-toastify";
 
@@ -10,8 +10,25 @@ export const CatalogCard = ({ item }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const { user } = useSelector((state) => state.auth);
+
   const notifyNotInStock = () => toast("Данного товара нет в наличии");
   const notifySuccessAddedInCart = () => toast("Товар добавлен в корзину!");
+  const notifyLogin = () => toast("Войдите в аккаунт, чтобы добавить товар");
+
+  const handleAddToCart = () => {
+    if (user === null) {
+      notifyLogin();
+      return;
+    }
+
+    if (item.inStock) {
+      dispatch(addToCart(item));
+      notifySuccessAddedInCart();
+    } else {
+      notifyNotInStock();
+    }
+  };
 
   return (
     <>
@@ -58,11 +75,7 @@ export const CatalogCard = ({ item }) => {
             className={`${styles.catalogBtn} ${
               !item.inStock ? styles.notavailable : ""
             }`}
-            onClick={() =>
-              item.inStock
-                ? dispatch(addToCart(item)) && notifySuccessAddedInCart()
-                : notifyNotInStock()
-            }
+            onClick={() => handleAddToCart()}
           />
         </div>
       </div>
