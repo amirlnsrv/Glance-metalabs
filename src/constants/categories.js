@@ -43,3 +43,12 @@ export const categories = [
     categoryId: 6,
   },
 ];
+
+export const categoryTitles = {
+  1: "Смартфоны",
+  2: "Ноутбуки",
+  3: "Компьютеры",
+  4: "Телевизоры",
+  5: "Планшеты",
+  6: "Колонки",
+};

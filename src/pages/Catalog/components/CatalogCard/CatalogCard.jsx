@@ -4,7 +4,7 @@ import { Button } from "common/ui/Button";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "store/cartSlice";
-import { Flip, toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 export const CatalogCard = ({ item }) => {
   const navigate = useNavigate();
@@ -12,9 +12,15 @@ export const CatalogCard = ({ item }) => {
 
   const { user } = useSelector((state) => state.auth);
 
-  const notifyNotInStock = () => toast("Данного товара нет в наличии");
-  const notifySuccessAddedInCart = () => toast("Товар добавлен в корзину!");
-  const notifyLogin = () => toast("Войдите в аккаунт, чтобы добавить товар");
+  const { cartItems } = useSelector((state) => state.cart);
+
+  const isInCart = cartItems.some((el) => el.id === item.id);
+
+  const notifyNotInStock = () => toast.error("Данного товара нет в наличии");
+  const notifySuccessAddedInCart = () =>
+    toast.success("Товар добавлен в корзину!");
+  const notifyLogin = () =>
+    toast.warn("Войдите в аккаунт, чтобы добавить товар");
 
   const handleAddToCart = () => {
     if (user === null) {
@@ -32,7 +38,6 @@ export const CatalogCard = ({ item }) => {
 
   return (
     <>
-      <ToastContainer transition={Flip} />
       <div className={styles.catalogCard}>
         <div
           className={styles.wrapper}
@@ -70,13 +75,20 @@ export const CatalogCard = ({ item }) => {
             )}
           </div>
 
-          <Button
-            title="В корзину"
-            className={`${styles.catalogBtn} ${
-              !item.inStock ? styles.notavailable : ""
-            }`}
-            onClick={() => handleAddToCart()}
-          />
+          {!isInCart ? (
+            <Button
+              title="В корзину"
+              className={`${styles.catalogBtn} ${
+                !item.inStock ? styles.notavailable : ""
+              }`}
+              onClick={() => handleAddToCart()}
+            />
+          ) : (
+            <Button
+              title="Перейти в корзину"
+              onClick={() => navigate("/cart")}
+            />
+          )}
         </div>
       </div>
     </>

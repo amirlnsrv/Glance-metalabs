@@ -13,7 +13,10 @@ export default defineConfig({
       api: "/src/api",
       constants: "/src/constants",
       store: "/src/store",
-      helpers: "/src/helpers"
+      helpers: "/src/helpers",
     },
+  },
+  server: {
+    host: true,
   },
 });

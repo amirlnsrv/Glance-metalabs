@@ -1,6 +1,7 @@
 .breadCrumbs {
     display: flex;
     user-select: none;
+    flex-wrap: wrap;
 
     &Item {
         display: flex;

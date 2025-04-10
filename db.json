@@ -10,16 +10,70 @@
       "phoneNumber": "0709437350"
     },
     {
-      "id": "40c2",
+      "id": "7e18",
       "name": "Latif",
-      "lastName": "Лансаров",
+      "lastName": "Lansarov",
       "age": "18",
       "email": "latif.lansarov@gmail.com",
       "password": "123123",
-      "phoneNumber": "+996555495125"
+      "phoneNumber": "0701053601"
+    },
+    {
+      "id": "88df",
+      "name": "Aliya",
+      "lastName": "Lansarova",
+      "age": "24",
+      "email": "aliya.lansarova@gmail.com",
+      "password": "435504aliya",
+      "phoneNumber": "0701053607"
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "14f7",
+      "user": {
+        "id": "92b8",
+        "name": "Amir",
+        "email": "amir.lansarov@gmail.com",
+        "phoneNumber": "0709437350"
+      },
+      "items": [
+        {
+          "id": "3",
+          "img": "https://i.postimg.cc/br2R2pqN/promotion-Item3.png",
+          "storage": 128,
+          "title": "HUAWEI nova Y61",
+          "price": 11999,
+          "quantity": 1,
+          "color": null
+        }
+      ],
+      "totalAmount": 11999,
+      "createdAt": "2025-04-09T12:35:24.769Z"
+    },
+    {
+      "id": "eef9",
+      "user": {
+        "id": "92b8",
+        "name": "Amir",
+        "email": "amir.lansarov@gmail.com",
+        "phoneNumber": "0709437350"
+      },
+      "items": [
+        {
+          "id": "1",
+          "img": "https://i.postimg.cc/tg2kKBry/promotion-Item1.png",
+          "storage": 128,
+          "title": "Apple iPhone 14",
+          "price": 84999,
+          "quantity": 1,
+          "color": null
+        }
+      ],
+      "totalAmount": 84999,
+      "createdAt": "2025-04-09T12:49:48.819Z"
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -478,6 +532,400 @@
           "date": "25.07",
           "rate": 4,
           "pros": "Крутой телефон, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "img": "https://basket-19.wbbasket.ru/vol3138/part313874/313874461/images/c516x688/1.webp",
+      "title": "Ноутбук Matebook D 16",
+      "price": 48595,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 512,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "img": "https://basket-17.wbbasket.ru/vol2637/part263716/263716703/images/c516x688/1.webp",
+      "title": "Ноутбук MagicBook 14",
+      "price": 50348,
+      "discountPrice": 45000,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 512,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "img": "https://basket-19.wbbasket.ru/vol3184/part318450/318450890/images/c516x688/1.webp",
+      "title": "MacBook Air 13",
+      "price": 92523,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 256,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "img": "https://basket-16.wbbasket.ru/vol2473/part247348/247348795/images/c516x688/1.webp",
+      "title": "Ноутбук Microsoft Surface Laptop 4",
+      "price": 204513,
+      "discountPrice": 180599,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 512,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "img": "https://basket-21.wbbasket.ru/vol3548/part354858/354858900/images/c516x688/1.webp",
+      "title": "Ноутбук игровой Acer Nitro 5",
+      "price": 82908,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 1024,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "img": "https://basket-18.wbbasket.ru/vol2906/part290661/290661677/images/c516x688/1.webp",
+      "title": "Ноутбук игровой HP Victus 15",
+      "price": 79143,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 1024,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
+          "cons": "Дорого..."
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "img": "https://basket-21.wbbasket.ru/vol3570/part357080/357080301/images/c516x688/1.webp",
+      "title": "Ноутбук Lenovo Ideapad",
+      "price": 42194,
+      "inStock": true,
+      "categoryId": 2,
+      "storage": 512,
+      "colors": [
+        1,
+        2,
+        3
+      ],
+      "reviews": [
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Дмитрий",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Очень красивый, удобно пользоваться",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Коля",
+          "date": "25.07",
+          "rate": 5,
+          "pros": "Цена норм, пользуюсь уже 2 месяца",
+          "cons": "Нет"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Анна",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Очень красивый, хочу оч сильно, скоро куплю",
+          "cons": "Оч дорого"
+        },
+        {
+          "avatar": "https://cdnn21.img.ria.ru/images/07e4/0c/0a/1588644193_0:321:3071:2048_1920x1080_80_0_0_85f1117800d6e25c21bb25e0e7d184e7.jpg",
+          "author": "Илюша",
+          "date": "25.07",
+          "rate": 4,
+          "pros": "Крутой ноутбук, все нравится, советую",
           "cons": "Дорого..."
         },
         {

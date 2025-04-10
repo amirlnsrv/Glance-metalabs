@@ -13,6 +13,7 @@ import { Flip, ToastContainer, toast } from "react-toastify";
 import { Spin } from "antd";
 import { productColors } from "constants/productColors";
 import { addToCart } from "store/cartSlice";
+import { categoryTitles } from "constants/categories";
 
 export const ProductDetails = () => {
   const { id } = useParams();
@@ -20,10 +21,13 @@ export const ProductDetails = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
 
-  const notifyError = () => toast("Произошла ошибка: " + currentProductError);
-  const notifyNotInStock = () => toast("Данного товара нет в наличии");
-  const notifySuccessAddedInCart = () => toast("Товар добавлен в корзину!");
-  const notifyLogin = () => toast("Войдите в аккаунт, чтобы добавить товар");
+  const notifyError = () =>
+    toast.error("Произошла ошибка: " + currentProductError);
+  const notifyNotInStock = () => toast.error("Данного товара нет в наличии");
+  const notifySuccessAddedInCart = () =>
+    toast.success("Товар добавлен в корзину!");
+  const notifyLogin = () =>
+    toast.warn("Войдите в аккаунт, чтобы добавить товар");
 
   const { isCurrentProductLoading, currentProduct, currentProductError } =
     useSelector((state) => state.products);
@@ -64,6 +68,8 @@ export const ProductDetails = () => {
     );
   }
 
+  console.log(categoryTitles);
+
   return (
     <main className={styles.productDetails}>
       <ToastContainer transition={Flip} />
@@ -72,7 +78,10 @@ export const ProductDetails = () => {
           <BreadCrumbs
             crumbs={[
               { name: "Главная", path: "/" },
-              { name: "Смартфоны", path: "/catalog/1" },
+              {
+                name: categoryTitles[currentProduct.categoryId],
+                path: `/catalog/${currentProduct.categoryId}`,
+              },
               { name: currentProduct.title, path: `/catalog/${id}` },
             ]}
           />

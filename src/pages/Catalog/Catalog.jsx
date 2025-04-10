@@ -19,15 +19,7 @@ import { Flip, toast, ToastContainer } from "react-toastify";
 import { Skeleton } from "common/ui/Skeleton";
 import { CatalogCard } from "./components/CatalogCard";
 import { sortOptions } from "constants/sortOptions";
-
-const categoryTitles = {
-  1: "Смартфоны",
-  2: "Ноутбуки",
-  3: "Компьютеры",
-  4: "Телевизоры",
-  5: "Планшеты",
-  6: "Колонки",
-};
+import { categoryTitles } from "constants/categories";
 
 export const Catalog = () => {
   const dispatch = useDispatch();
